@@ -5,9 +5,11 @@ import Button from "./Components/Button";
 import "./Style/Calc.css";
 
 function App() {
+
   const clickHandlerFunctions = (text) => {
     console.log(text);
   }
+
   return (
     <main className="react-calculator">
       <Result value = {undefined}/>
