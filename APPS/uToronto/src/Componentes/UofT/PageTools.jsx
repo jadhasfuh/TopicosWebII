@@ -1,9 +1,9 @@
 import React from 'react';
-import "../../Styles/NavBar.css";
-import acorn from "../../images/acorn.png";
-import mail from "../../images/mail.png";
-import tree from "../../images/tree.png";
-import loupe from "../../images/loupe.png";
+import "../../Styles/UofT/NavBar.css";
+import acorn from "../../images/UofT/acorn.png";
+import mail from "../../images/UofT/mail.png";
+import tree from "../../images/UofT/tree.png";
+import loupe from "../../images/UofT/loupe.png";
 
 const PageTools = () => {
     return (

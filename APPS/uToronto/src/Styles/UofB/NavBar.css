@@ -1,0 +1,78 @@
+.Bnavi {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  margin-top: 15px;
+}
+
+.Bnavi li {
+  float: left;
+}
+
+.Bnavi li a {
+  display: block;
+  position: relative;
+  width: 280px;
+  color: white;
+  background-color: #000000;
+  text-align: center;
+  padding: 14px;
+  text-decoration: none;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 20px;
+  font-style: italic;
+}
+
+.BNavegacion {
+  margin: auto;
+  width: 81%;
+  padding: 10px;
+}
+
+.BPageTools {
+  list-style-type: none;
+  margin: auto;
+  width: 81%;
+  padding: 10px;
+}
+
+.BPageTools li {
+  display: inline;
+}
+
+.BPageTools img {
+  margin-bottom: -30px;
+  padding: 3px;
+}
+
+.BPageTools table {
+  width: 100%;
+}
+
+.Bnavi2{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #ededec;
+  width: 100%;
+}
+
+.Bnavi2 li {
+  float: left;
+}
+
+.Bnavi2 li a {
+  display: block;
+  position: relative;
+  width: 100px;
+  color: dimgray;
+  background-color: #ededec;
+  text-align: center;
+  padding: 5px;
+  text-decoration: none;
+  font-size: 14px;
+  font-style: italic;
+}

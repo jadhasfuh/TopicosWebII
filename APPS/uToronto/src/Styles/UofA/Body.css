@@ -1,0 +1,61 @@
+.BHeader{
+    position: relative;
+    top: -40px;
+    background-color: #cfb99e;
+    padding: 30px;
+    color: white;
+}
+
+.BHeader table{
+    width: 100%;
+}
+
+.BHeader table tr td{
+    width: 33%;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+.APres{
+    background-color: white;
+    color: #000;
+    text-align: center;
+    width: 100%;
+    margin-top: -40px;
+    font-size: 14px;
+}
+
+.APres hr{
+    margin: 15px;
+}
+
+.ATextos{
+    margin: auto;
+    width: 60%;
+    text-align: justify; 
+    padding: 2px;
+}
+
+.ATextos p{
+    color: #8992b5;
+}
+
+.ATextos a{
+    color: #2aabde;
+}
+
+.ATextos2{
+    margin: auto;
+    width: 60%;
+    text-align: justify;
+    background-color: #efeeed;
+    padding: 2px;
+}
+
+.ATextos2 p{
+    color: #8992b5;
+}
+
+.ATextos2 a{
+    color: #2aabde;
+}

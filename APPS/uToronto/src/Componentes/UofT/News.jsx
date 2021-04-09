@@ -1,8 +1,8 @@
 import React from 'react'
-import "../../Styles/Body.css";
-import uTogue from '../../images/utoguether.png';
-import in1 from '../../images/news1.jpg';
-import in2 from '../../images/news2.png';
+import "../../Styles/UofT/Body.css";
+import uTogue from '../../images/UofT/utoguether.png';
+import in1 from '../../images/UofT/news1.jpg';
+import in2 from '../../images/UofT/news2.png';
 import Noticia from './Noticia';
 
 const News = () => {

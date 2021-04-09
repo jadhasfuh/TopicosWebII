@@ -1,5 +1,5 @@
 import React from 'react';
-import "../../Styles/NavBar.css";
+import "../../Styles/UofT/NavBar.css";
 
 const Navegacion = () => {
     return (

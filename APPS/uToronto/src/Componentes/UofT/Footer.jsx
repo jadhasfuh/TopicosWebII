@@ -1,9 +1,9 @@
 import React from "react";
-import "../../Styles/Footer.css";
-import footerLogo from "../../images/footerLogo.svg";
-import acorn from "../../images/acorn.png";
-import mail from "../../images/mail.png";
-import tree from "../../images/tree.png";
+import "../../Styles/UofT/Footer.css";
+import footerLogo from "../../images/UofT/footerLogo.svg";
+import acorn from "../../images/UofT/acorn.png";
+import mail from "../../images/UofT/mail.png";
+import tree from "../../images/UofT/tree.png";
 
 const Footer = () => {
   return (
@@ -66,9 +66,9 @@ const Footer = () => {
       </div>
       <div className="fdown">
         <p>
-          <img src={acorn} />
-          &nbsp;&nbsp;<img src={tree} />
-          &nbsp;&nbsp;<img src={mail} />
+          <img src={acorn} alt="Corrupto"/>
+          &nbsp;&nbsp;<img src={tree} alt="Corrupto"/>
+          &nbsp;&nbsp;<img src={mail} alt="Corrupto"/>
           &nbsp;&nbsp;&nbsp;SOCIAL MEDIA DIRECTORY
         </p>
         <p>UNIVERSITY OF TORONTO - SINCE 1827</p>

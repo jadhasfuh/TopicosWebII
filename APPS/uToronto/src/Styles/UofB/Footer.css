@@ -1,0 +1,9 @@
+.BFooter{
+    background-color: #000000;
+    color: white;
+    width: 80%;
+    padding: 10px;
+    text-align: left;
+    font-size: 11px;
+    margin: auto;
+}

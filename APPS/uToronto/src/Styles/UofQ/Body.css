@@ -1,0 +1,102 @@
+.QVideo {
+  width: 100%;
+}
+
+.QVideo video {
+  width: 100%;
+}
+
+#QTag {
+  background-color: #666666;
+  color: white;
+  position: absolute;
+  height: 50px;
+  width: 28%;
+  right: 50px;
+  bottom: 100px;
+  padding: 15px;
+  font-style: italic;
+}
+
+#QTag p {
+  color: cornflowerblue;
+  display: inline;
+  font-size: 18px;
+}
+
+.QGazzette {
+  margin: auto;
+  width: 60%;
+  margin-top: 50px;
+}
+
+#QGLogo {
+  width: 20%;
+}
+
+.QGBar {
+  background-color: #af435d;
+  width: 49%;
+  height: 5px;
+  margin-top: 15px;
+  display: inline;
+  position: absolute;
+}
+
+#CardContainer {
+  width: 100%;
+}
+
+.QCard {
+  color: cornflowerblue;
+  display: inline-table;
+  position: relative;
+  width: 23%;
+  padding: 11px;
+}
+
+.QCard img {
+  width: 100%;
+}
+
+.QCard p {
+  width: 100%;
+}
+
+#SpotContainer {
+  width: 100%; 
+  margin-top: -30px;
+}
+
+.QSpot {
+  display: inline-table;
+  position: relative;
+  width: 35%;
+  padding: 11px;
+}
+
+.QSpot img {
+  width: 100%;
+}
+
+.QSpot p {
+  width: 100%;
+  color: cornflowerblue;
+  margin-top: 30px;
+}
+
+.QSpot h3 {
+  margin: 0;
+}
+
+.QSpot h4 {
+  color: #af435d;
+}
+
+#Cal {
+  width: 270px;
+  margin-top: 14px;
+  display: inline-table;
+  position: absolute;
+  padding: 11px;
+}

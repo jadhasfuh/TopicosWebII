@@ -1,19 +1,15 @@
-import React from 'react';
-import Navegacion from './Navegacion';
-import PageTools from './PageTools';
-import logo from "../../images/logo.svg";
+import React from "react";
+import Navegacion from "./Navegacion";
+import PageTools from "./PageTools";
+import logo from "../../images/UofT/logo.svg";
 
 function NavBar() {
   return (
-
     <nav className="navbar">
-      
-      <PageTools/>
+      <PageTools />
       <img src={logo} className="App-logo" alt="Corrupto"></img>
-      <Navegacion/>
-      
+      <Navegacion />
     </nav>
-    
   );
 }
 

@@ -1,7 +1,7 @@
 import React from "react";
-import "../../Styles/Body.css";
-import features from "../../images/features.jpg";
-import arrow from "../../images/arrow.png";
+import "../../Styles/UofT/Body.css";
+import features from "../../images/UofT/features.jpg";
+import arrow from "../../images/UofT/arrow.png";
 
 const Feature = () => {
   return (

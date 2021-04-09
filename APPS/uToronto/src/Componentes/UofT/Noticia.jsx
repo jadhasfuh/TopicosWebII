@@ -1,5 +1,5 @@
 import React from 'react'
-import "../../Styles/Body.css";
+import "../../Styles/UofT/Body.css";
 
 const Noticia = (props) => {
     return (

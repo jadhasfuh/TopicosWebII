@@ -1,6 +1,6 @@
 import React from "react";
-import "../../Styles/Body.css";
-import magaIcon from "../../images/magaIcon.png";
+import "../../Styles/UofT/Body.css";
+import magaIcon from "../../images/UofT/magaIcon.png";
 
 const Magazine = () => {
   return (

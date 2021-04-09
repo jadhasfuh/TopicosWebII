@@ -1,0 +1,94 @@
+/*NAVBAR SECTION*/
+
+.ANavBar {
+  list-style-type: none;
+  position: relative;
+  top: -15px;
+  width: 100%;
+  background-color: white;
+  height: 100px;
+}
+
+.ALogo {
+  width: 200px;
+  margin-top: -7px;
+  margin-left: 290px;
+  margin-right: 170px;
+}
+
+.ALogo img {
+  width: 200px;
+  position: absolute;
+  top: 10px;
+  overflow: hidden;
+}
+
+.ANavBar ul {
+  list-style: none;
+}
+
+.ANavBar li {
+  float: left;
+}
+
+.ANavBar li a {
+  display: block;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  padding: 30px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.ANavBar li a:hover {
+  text-decoration: underline;
+}
+
+.ANavF {
+  background-color: #0ea9d9;
+  color: white;
+}
+
+.ANavFS {
+  border-top: 90px solid #0ea9d9;
+  border-left: 15px solid transparent;
+}
+
+/*HEADER SECTION*/
+.AHeader {
+  list-style-type: none;
+  position: relative;
+  width: 1000px;
+  top: -110px;
+}
+
+.AHeader table {
+  width: 200%;
+  height: 30vh;
+  color: white;
+  text-align: center;
+}
+
+.AHeader table tr td {
+  width: 250px;
+  background-color: #0ea9d9;
+}
+
+.AHeader table tr td:hover {
+  background-color: #0e9ac5;
+  text-decoration: underline;
+}
+
+.AHeader table tr td img{
+   width: 100px;
+   height: 100px;
+  }
+
+.ATitle{
+    text-align: center;
+    width: 100%;
+    position: relative;
+    top: -80px;;
+}
