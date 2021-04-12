@@ -38,7 +38,6 @@ const Navegacion = () => {
         <li>
           <a href="#contact">Posgrados</a>
         </li>
-
         <li>
           <a href="#contact">Colegios</a>
         </li>

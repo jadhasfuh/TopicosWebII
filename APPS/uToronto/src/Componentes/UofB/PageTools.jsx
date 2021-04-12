@@ -23,20 +23,20 @@ const PageTools = () => {
               </td>
               <td>
                 <ul>
-                  <li><img src={redes1} alt=""Corrupto/></li>
-                  <li><img src={redes2} alt=""Corrupto/></li>
-                  <li><img src={redes3} alt=""Corrupto/></li>
-                  <li><img src={redes4} alt=""Corrupto/></li>
-                  <li><img src={redes5} alt=""Corrupto/></li>
-                  <li><img src={redes6} alt=""Corrupto/></li>
-                  <li><img src={redes7} alt=""Corrupto/></li>
+                  <li><img src={redes1} alt="Corrupto"/></li>
+                  <li><img src={redes2} alt="Corrupto"/></li>
+                  <li><img src={redes3} alt="Corrupto"/></li>
+                  <li><img src={redes4} alt="Corrupto"/></li>
+                  <li><img src={redes5} alt="Corrupto"/></li>
+                  <li><img src={redes6} alt="Corrupto"/></li>
+                  <li><img src={redes7} alt="Corrupto"/></li>
                 </ul>
               </td>
               <td style={{textAlign:'right'}}>
                 <ul>
-                  <li><img src={flag1} alt=""Corrupto/></li>
-                  <li><img src={flag2} alt=""Corrupto/></li>
-                  <li><img src={flag3} alt=""Corrupto/></li>
+                  <li><img src={flag1} alt="Corrupto"/></li>
+                  <li><img src={flag2} alt="Corrupto"/></li>
+                  <li><img src={flag3} alt="Corrupto"/></li>
                 </ul>
                 <input type="text" placeholder="buscador"/><img src={lupa} alt="Corrupto" style={{marginTop:'20px', height:'60px'}}/>
               </td>
