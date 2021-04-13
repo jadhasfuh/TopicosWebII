@@ -15,7 +15,7 @@ const QLFL1 = () => {
                 <li>Careers</li>
                 <li>Administration Governance</li>
                 <li>Give to Queen's</li>
-                <li>WEb Privacy</li>
+                <li>Web Privacy</li>
                 <li><img src={tw} alt="Corrupto"/></li>
                 <li><img src={fb} alt="Corrupto"/></li>
                 <li><img src={tw} alt="Corrupto"/></li>
