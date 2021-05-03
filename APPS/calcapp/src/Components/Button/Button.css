@@ -1,3 +1,5 @@
-.button-long-text{
-    font-size: 12px;
+.MButton{
+    background-color: transparent;
+    border: none;
+    display: list-item;
 }
