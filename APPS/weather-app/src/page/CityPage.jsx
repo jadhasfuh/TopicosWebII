@@ -5,6 +5,8 @@ import Weather from '../components/weather/Weather';
 import WeatherDetails from '../components/weather-details/WeatherDetails';
 import ForecastChart from '../components/forecast-chart/ForecastChart';
 import Forecast from '../components/forecast/Forecast';
+import AppFrame from '../components/app-frame/AppFrame';
+import Paper from '@material-ui/core/Paper';
 
 const data = [
     {
@@ -99,23 +101,25 @@ const humidity = 70;
 
 const CityPage = () => {
     return (
-        <div>
-            <Grid container justify='space-around' spacing={2} direction='column'>
-                <Grid container item xs = {12} justify='center' alignItems='flex-end'>
-                    <CityInfo country={country} city={city}/>
+        <AppFrame>
+            <Paper elevation = {3}>
+                <Grid container justify='space-around' spacing={2} direction='column'>
+                    <Grid container item xs = {12} justify='center' alignItems='flex-end'>
+                        <CityInfo country={country} city={city}/>
+                    </Grid>
+                    <Grid container item  xs = {12} justify='center'>
+                        <Weather state={state} temperature={temperature}/>
+                        <WeatherDetails wind={wind} humidity={humidity} />
+                    </Grid>
+                    <Grid item>
+                        <ForecastChart data={data}/>
+                    </Grid>
+                    <Grid item>
+                        <Forecast forecastItemList={forecastItemList}/>
+                    </Grid>
                 </Grid>
-                <Grid container item  xs = {12} justify='center'>
-                    <Weather state={state} temperature={temperature}/>
-                    <WeatherDetails wind={wind} humidity={humidity} />
-                </Grid>
-                <Grid item>
-                    <ForecastChart data={data}/>
-                </Grid>
-                <Grid item>
-                    <Forecast forecastItemList={forecastItemList}/>
-                </Grid>
-            </Grid>
-        </div>
+            </Paper>
+        </AppFrame>
     )
 }
 
