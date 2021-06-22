@@ -11,19 +11,21 @@ import {
 } from 'react-icons/wi';
 
 export const validValues = [
-    "cloud",
+    "clouds",
     "cloudy",
     "fog",
     "sunny",
     "rain",
+    "mist",
 ];
 
 const stateByName = {
-    cloud: WiCloud,
+    clouds: WiCloud,
     cloudy: WiDayCloudy,
     fog: WiDayFog,
     sunny: WiDaySunny,
-    rain: WiDayRain
+    rain: WiDayRain,
+    mist: WiDayFog
 };
 
 

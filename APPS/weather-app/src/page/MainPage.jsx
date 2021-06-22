@@ -13,32 +13,29 @@ const MainPage = () => {
 
     const cities = [
         {
-            city:"Ciudad Juarez", 
-            country:"Mexico"
-        },
-        {
-            city:"Ciudad Sahagun", 
-            country:"Mexico"
-        },
-        {
             city:"Guadalajara", 
-            country:"Mexico"
+            country:"Mexico",
+            countryCode:"MX"
         },
         {
-            city:"Paris", 
-            country:"Francia"
+            city:"Morelia", 
+            country:"Mexico",
+            countryCode:"MX"
+        },
+        /*{
+            city:"Buenos Aires", 
+            country:"Argentina",
+            countryCode:"AR"
         },
         {
-            city:"New York", 
-            country:"EUA"
-        },
+            city:"Bogota", 
+            country:"Colombia",
+            countryCode:"CO"
+        },*/
         {
-            city:"Tokio", 
-            country:"Japon"
-        },
-        {
-            city:"Dubai", 
-            country:"EAU"
+            city:"Madrid", 
+            country:"Spain",
+            countryCode:"ES"
         }
     ];
 

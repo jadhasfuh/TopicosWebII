@@ -12,7 +12,7 @@ import Grid from '@material-ui/core/Grid';
 const App = () => {
   return (
     <Grid container alignItems='center' justify='center' direction='row'>
-      <Grid item xs={12} sm={11} md={10} lg={8}>
+      <Grid item xs={12} sm={12} md={12} lg={12}>
         <Router>
           <Switch>
             <Route exact path="/">

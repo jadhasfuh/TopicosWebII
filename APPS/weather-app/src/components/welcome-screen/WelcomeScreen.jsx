@@ -8,18 +8,15 @@ const WelcomeScreen = ({children}) => {
     const myRefDiv = useRef(null);
     const [vanta,setVanta] = useState(0);
     
-    alert("Primera renderizacion",myRefDiv.current);
 
     useEffect(() => {
-        alert("Segunda renderizacion",myRefDiv.current);
-        if( vanta == 0 ) {
+        if( vanta === 0 ) {
             setVanta(
                 CLOUDS({
                     THREE, 
                     el: myRefDiv.current
                 })
             )
-            alert("vanta es diferente de 0");
         }
         return () => {
             if (vanta) vanta.destroy()
