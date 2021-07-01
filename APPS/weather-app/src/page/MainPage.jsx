@@ -31,12 +31,12 @@ const MainPage = () => {
             city:"Bogota", 
             country:"Colombia",
             countryCode:"CO"
-        },*/
+        },
         {
             city:"Madrid", 
             country:"Spain",
             countryCode:"ES"
-        }
+        }*/
     ];
 
     return (

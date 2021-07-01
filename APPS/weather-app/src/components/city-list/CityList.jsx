@@ -1,4 +1,4 @@
-import React,{useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import PropTypes from 'prop-types'
 import CityInfo from '../city-info/CityInfo';
 import Weather from '../weather/Weather';
@@ -11,33 +11,34 @@ import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormLabel from '@material-ui/core/FormLabel';
+import Alert from '@material-ui/lab/Alert';
 
-const renderAndCityCountry = eventOnClickCity => (value,cityandcountry,weather) => {
-    
-    const {city,country} = cityandcountry;
+const renderAndCityCountry = eventOnClickCity => (value, cityandcountry, weather) => {
+
+    const { city, country } = cityandcountry;
     var temperature = 0;
     if (weather) {
-        if(value === 'Kelvin'){
+        if (value === 'Kelvin') {
             temperature = weather.temperature;
-        } else if(value === 'Farenheit'){
-            temperature = ((weather.temperature-273.15)*1.8)+32;
+        } else if (value === 'Farenheit') {
+            temperature = ((weather.temperature - 273.15) * 1.8) + 32;
         } else {
-            temperature = ((weather.temperature-273.15));
+            temperature = ((weather.temperature - 273.15));
         }
     }
-    
+
 
     return (
         <ListItem key={city} onClick={eventOnClickCity} button>
             <Grid container justify="center" alignItems="center">
                 <Grid item md={8} xs={12}>
-                    <CityInfo city= {city} country={country}/>
+                    <CityInfo city={city} country={country} />
                 </Grid>
                 <Grid item md={4} sm="12">
                     {
                         weather ? (
-                            <Weather temperature = {parseFloat(temperature).toFixed(2)} state = {weather.state}/>
-                        ): (":( No hay data disponible")
+                            <Weather temperature={parseFloat(temperature).toFixed(2)} state={weather.state} />
+                        ) : (":( No hay data disponible")
                     }
                 </Grid>
             </Grid>
@@ -45,15 +46,40 @@ const renderAndCityCountry = eventOnClickCity => (value,cityandcountry,weather) 
     )
 }
 
-const CityList = ({cities,onClickCity}) => {
+const CityList = ({ cities, onClickCity }) => {
 
-    const [allWeather,setAllWeather] = useState({});
+    const [error, setError] = useState(null);
+    const [allWeather, setAllWeather] = useState({});
 
     useEffect(() => {
-        const setWather = (city,country,countryCode) => {
+        const setWather = async (city, country, countryCode) => {
             const appid = "90b56df6574757975727b9dd5dd79ea5"
             const url = `https://api.openweathermap.org/data/2.5/weather?q=${city},${countryCode}&appid=${appid}`
-            axios.get(url)
+
+            try {
+                const response = await axios.get(url);
+                const temperature = data.main.temp
+                const state = data.weather[0].main.toLowerCase()
+                const propName = [`${city}-${country}`]
+                const propValue = { temperature, state }
+
+                setAllWeather(allWeather => ({
+                    ...allWeather,
+                    [propName]: propValue
+                }));
+
+            } catch (e) {
+                if (error.response) {
+                    const { data, status } = error.response;
+                    setError("Error en el servidor");
+                } else if (error.request) {
+                    setError("Verifique su conexion a internet");
+                } else {
+                    setError("Error al cargar los datos");
+                }
+            }
+
+            /*axios.get(url)
                 .then(response => {
                     const {data} = response
                     const temperature = data.main.temp
@@ -63,12 +89,26 @@ const CityList = ({cities,onClickCity}) => {
 
                     setAllWeather(allWeather=>({...allWeather,[propName]:propValue}))
                 })
+                .catch(error => {
+                    if(error.response) {
+                        const {data,status} = error.response;
+                        console.log("data",data);
+                        console.log("status",status);
+                        setError("Error en el servidor");
+                    }else if (error.request) {
+                        console.log("Servidor inaccesible")
+                        setError("Verifique su conexion a internet");
+                    }else{
+                        console.log("Error de servidor");
+                        setError("Error al cargar los datos");
+                    }
+                })*/
         }
 
-        cities.forEach(({city,country,countryCode}) => {
-            setWather(city,country,countryCode)
+        cities.forEach(({ city, country, countryCode }) => {
+            setWather(city, country, countryCode)
         })
-    },[cities]);
+    }, [cities]);
 
     const [value, setValue] = React.useState('Farenheit');
 
@@ -86,9 +126,15 @@ const CityList = ({cities,onClickCity}) => {
                     <FormControlLabel value="Celcius" control={<Radio />} label="Celcius" />
                 </RadioGroup>
             </FormControl>
+            {
+                error &&
+                <Alert severity="Error" >
+                    {error}
+                </Alert>
+            }
             <List>
                 {
-                    cities.map(cityandcountry => renderAndCityCountry(onClickCity)(value,cityandcountry,
+                    cities.map(cityandcountry => renderAndCityCountry(onClickCity)(value, cityandcountry,
                         allWeather[`${cityandcountry.city}-${cityandcountry.country}`]
                     ))
                 }
@@ -98,14 +144,14 @@ const CityList = ({cities,onClickCity}) => {
 }
 
 CityList.propTypes = {
-    cities : PropTypes.arrayOf(
+    cities: PropTypes.arrayOf(
         PropTypes.shape({
             city: PropTypes.string.isRequired,
             country: PropTypes.string.isRequired,
             countryCode: PropTypes.string.isRequired,
         }),
-    ).isRequired, 
-    onClickCity : PropTypes.func.isRequired
+    ).isRequired,
+    onClickCity: PropTypes.func.isRequired
 }
 
 export default CityList
